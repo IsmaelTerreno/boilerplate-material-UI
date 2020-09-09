@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 import DashboardLayout from 'src/layouts/DashboardLayout';
 import MainLayout from 'src/layouts/MainLayout';
-import DashboardView from 'src/views/home/DashboardView';
+import HomeView from 'src/views/home/HomeView';
 import NotFoundView from 'src/views/errors/NotFoundView';
 
 const routes = [
@@ -10,7 +10,7 @@ const routes = [
     path: 'home',
     element: <DashboardLayout />,
     children: [
-      { path: 'home', element: <DashboardView /> },
+      { path: 'home', element: <HomeView /> },
       { path: '*', element: <Navigate to="/404" /> }
     ]
   },
