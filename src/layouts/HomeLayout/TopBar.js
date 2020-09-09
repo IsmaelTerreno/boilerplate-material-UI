@@ -38,7 +38,7 @@ const TopBar = ({
   return (
     <AppBar
       className={clsx(classes.appBar, className)}
-      elevation={0}
+      elevation={1}
       {...rest}
     >
       <Toolbar>
