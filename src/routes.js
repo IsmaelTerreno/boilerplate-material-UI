@@ -1,8 +1,8 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import DashboardLayout from 'src/layouts/DashboardLayout';
+import DashboardLayout from 'src/layouts/HomeLayout';
 import MainLayout from 'src/layouts/MainLayout';
-import HomeView from 'src/views/home/HomeView';
+import Index from 'src/views/home';
 import NotFoundView from 'src/views/errors/NotFoundView';
 
 const routes = [
@@ -10,7 +10,7 @@ const routes = [
     path: 'home',
     element: <DashboardLayout />,
     children: [
-      { path: 'home', element: <HomeView /> },
+      { path: 'home', element: <Index /> },
       { path: '*', element: <Navigate to="/404" /> }
     ]
   },

@@ -16,11 +16,14 @@ import NotificationsIcon from '@material-ui/icons/NotificationsOutlined';
 import InputIcon from '@material-ui/icons/Input';
 import Logo from 'src/components/Logo';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {},
   avatar: {
     width: 60,
     height: 60
+  },
+  appBar:{
+    backgroundColor: theme.palette.background.white,
   }
 }));
 
@@ -34,7 +37,7 @@ const TopBar = ({
 
   return (
     <AppBar
-      className={clsx(classes.root, className)}
+      className={clsx(classes.appBar, className)}
       elevation={0}
       {...rest}
     >
